@@ -10,10 +10,15 @@ The design is suitable for applications where maintaining a stable temperature r
 Temperature regulation is achieved using a PI controller implemented on an Arduino.
 
 Control Parameters
+
 Parameter	and Value
+
 Kp = 5.5
+
 Ki = 0.6
+
 Setpoint = 38.5 °C
+
 Range = 37.5 – 39.5 °C
 
 Control Features
