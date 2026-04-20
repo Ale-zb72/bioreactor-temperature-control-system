@@ -1,4 +1,5 @@
-# bioreactor-temperature-control-system
+# Bioreactor Temperature Control System (Arduino-Based)
+
 Design and implementation of a temperature control system for a small-scale bioreactor, focused on maintaining stable thermal conditions required for biological or chemical processes.
 
 # Overview
@@ -9,32 +10,39 @@ The design is suitable for applications where maintaining a stable temperature r
 # Control System
 Temperature regulation is achieved using a PI controller implemented on an Arduino.
 
-Control Parameters
+Control Parameters:
+- Kp = 5.5
+- Ki = 0.6
+- Setpoint = 38.5 °C
+- Range = 37.5 – 39.5 °C
 
-Kp = 5.5
-
-Ki = 0.6
-
-Setpoint = 38.5 °C
-
-Range = 37.5 – 39.5 °C
-
-Control Features
-Open-loop mode for system analysis
-Closed-loop mode for automatic regulation
-Output saturation (0–100%)
-Safety constraints to prevent overheating
+Control Features:
+- Open-loop mode for system analysis
+- Closed-loop mode for automatic regulation
+- Output saturation (0–100%)
+- Safety constraints to prevent overheating
 
 # System Architecture
 
 The system integrates sensing, control, and actuation:
-- Sensor: DS18B20 (temperature measurement)
-- Controller: Arduino Uno
-- Actuation: Heating resistors
-- Power stage: LM317 + TIP147 transistor
-- Interface: LCD 16x2 (I2C)
-- Synchronization: Zero-cross detection
+- **Controller:** Arduino Uno (embedded implementation)
+- **Sensor:** DS18B20 (temperature measurement)
+- **Controller:** Arduino Uno
+- **Actuation:** Heating resistors
+- **Power stage:** LM317 + TIP147 transistor
+- **Interface:** LCD 16x2 (I2C)
+- **Synchronization:** Zero-cross detection
 
+## Embedded Implementation
+
+The control algorithm is implemented on an Arduino microcontroller, enabling real-time temperature monitoring and control of the heating system.
+
+The system performs:
+- Sensor data acquisition  
+- Control computation (PI controller)  
+- Actuator control  
+- User interface update (LCD)
+  
 # System Diagram
 bioreactor-temperature-control-system/bioreactor_diagram.jpg
 
@@ -46,7 +54,7 @@ Three sets of controller parameters were tested to evaluate system performance.
 - Test 2: Kp = 5.0, Ki = 0.5
 - Test 3: Kp = 5.5, Ki = 0.6
 
-Key Result
+## Key Result
 
 The third configuration provided the best performance:
 
