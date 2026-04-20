@@ -11,8 +11,6 @@ Temperature regulation is achieved using a PI controller implemented on an Ardui
 
 Control Parameters
 
-Parameter	and Value
-
 Kp = 5.5
 
 Ki = 0.6
