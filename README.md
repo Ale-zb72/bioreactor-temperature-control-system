@@ -33,3 +33,55 @@ The system integrates sensing, control, and actuation:
 - Synchronization: Zero-cross detection
 
 # System Diagram
+bioreactor-temperature-control-system/bioreactor_diagram.jpg
+
+# Experimental Results
+
+Three sets of controller parameters were tested to evaluate system performance.
+
+- Test 1: Kp = 4.5, Ki = 0.4
+- Test 2: Kp = 5.0, Ki = 0.5
+- Test 3: Kp = 5.5, Ki = 0.6
+
+Key Result
+
+The third configuration provided the best performance:
+
+- Stable temperature regulation
+- Error within approximately ±0.5 °C of setpoint
+- Smooth system response
+
+# System Response
+
+The system exhibits gradual heating due to thermal inertia and stabilizes around the desired setpoint.
+
+# Metodology
+
+1. Sensor validation and testing
+2. Open-loop system characterization
+3. Implementation of PI control
+4. Parameter tuning through experimental trials
+5. Data acquisition using Arduino and serial communication
+6. Data processing and visualization in MATLAB
+
+# Hardware Implementation
+
+- Heating resistors attached to a container
+- External temperature sensing
+- Magnetic stirring (optional for homogenization)
+- PCB implementation for circuit stability
+- Heat dissipation for power components
+
+# Engineering Cosiderations
+
+- Thermal systems exhibit slow dynamics, limiting the need for derivative control
+- Heat dissipation in power components is critical
+- Heating and cooling rates are not symmetric
+- Controller tuning depends on operating conditions
+
+# Applications
+
+- Bioreactors and incubation systems
+- Temperature-sensitive processes
+- Biomedical and laboratory equipment
+- Control systems education
